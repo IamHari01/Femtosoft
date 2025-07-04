@@ -3,47 +3,93 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f5f5f5;
   }
-.container{
-    display: flex;
-}
-  .hamburger{
-    background-color:white;
-    padding-top: 25px;
-    border:none;
-    color:black;
-    width:50px;
-    height: 50px;
-    cursor:pointer;
-    
+  ul {
+    list-style-type: none; 
+    padding-left: 0;      
   }
-  .sidebar{
-    top: 55px;
-    left: 0;
+  
+  .container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+  }
+  
+  .hamburger {
+    background-color: white;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  .side-hamburger{
+    background-color: rgb(0, 0, 0);
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #f5f5f5;
+  }
+  
+  .top-h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
     width: 250px;
     height: 100%;
     background: #252525;
+    color: white;
     transition: left 0.3s ease;
-    position:fixed;
-    left: -250px;
-    width: 250px;
-    overflow-x: hidden;
-}
-
-.sidebar a {
+    z-index: 1001;
+  }
+  
+  .sidebar.active {
+    left: 0;
+  }
+  
+  .sidebar .top-sidebar {
+    display: flex;
+    align-items: center;
+    background-color: #252525;
+    padding: 15px;
+    border-color: #252525;
+    
+  }
+  
+  .sidebar .top-h1 {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .sidebar a {
     display: block;
     padding: 10px 15px;
     color: white;
     text-decoration: none;
   }
-
+  
   .sidebar a:hover {
-    background-color: #575757;
+    background-color: #89878732;
   }
-  .sidebar.active {
-    left: 0;
-  }
+  
   .main {
     padding: 20px;
     text-align: center;
-    
   }
+  
+  /* When sidebar is active, hide top bar */
+  body.sidebar-open #top-bar {
+    display: none;
+  }
+  
+  /* Optional: Push main content when sidebar opens (optional) */
+  body.sidebar-open .main {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease;
+  }
+  
