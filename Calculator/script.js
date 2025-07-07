@@ -55,6 +55,10 @@ document.addEventListener('keydown', (event) => {
       display.value = '';
     }
   });
+  function scientificCalc() {
+    document.body.innerHTML = '<h1 class="new-message">Production is in Beta model.We are working on it........<h1>';
+
+  }
 // const display = document.getElementById('display');
 
 //   const errorMessages = ['Error', 'undefined', 'Infinity', 'NaN', 'Errorஉ'];
