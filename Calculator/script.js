@@ -10,7 +10,7 @@ function clearDisplay(){
     display.value = '';
 }
 function deleteOnce(){
-   if(display.value === 'Errorஉ' ){
+   if(display.value === 'Errorஉ','undefined' ){
     clearDisplay();
     
    }else{
