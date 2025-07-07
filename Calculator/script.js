@@ -10,10 +10,15 @@ function clearDisplay(){
     display.value = '';
 }
 function deleteOnce(){
-   if(display.value === 'Errorஉ','undefined' ){
+   if(display.value === 'Errorஉ' ){
     clearDisplay();
     
-   }else{
+   }
+   else if(display.value === 'undefined' ){
+    clearDisplay();
+    
+   }
+   else{
     display.value = display.value.slice(0, -1);
    }
 }
