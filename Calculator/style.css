@@ -41,6 +41,11 @@ button:active{
 .external-btn{
     background-color: hsl(0, 0%, 50%);
 }
+.sci-calc{
+    background-color: hsla(121, 62%, 39%, 0.945);
+}
+.external-btn{
+}
 #keys{
     display:grid;
     grid-template-columns:repeat(4, 1fr) ;
@@ -63,7 +68,7 @@ h1{
     width:100%;
     padding:20px;
     font-size: 4rem;
-    border:none;
+    /* border:none; */
     
     text-align: left;
   
