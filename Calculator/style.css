@@ -44,8 +44,7 @@ button:active{
 .sci-calc{
     background-color: hsla(121, 62%, 39%, 0.945);
 }
-.external-btn{
-}
+
 #keys{
     display:grid;
     grid-template-columns:repeat(4, 1fr) ;
